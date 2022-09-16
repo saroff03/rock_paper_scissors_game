@@ -6,11 +6,19 @@ function computerChoice(){
 }
 
 function playerChoice(){
-  const playerChoice = prompt("Type ROCK, PAPER or SCISSORS. Capitalization does not matter but spelling does!");
-  const input = playerChoice.toUpperCase();
-  return input;
+  let validatedInput = false;
+  while(validatedInput == false){
+    const choice = prompt("Type ROCK, PAPER or SCISSORS. Capitalization does not matter but spelling does!");
+    if(choice == null){
+      continue;
+    }
+    const choiceInUpper = choice.toUpperCase();
+    if(choices.includes(choiceInUpper)){
+      validatedInput = true;
+      return choiceInUpper;
+    }
+  }
 }
-
 function checkWinner(playerChoice, computerChoice){
   if(playerChoice == computerChoice){
     return "tie"
@@ -39,6 +47,33 @@ function playRound(playerChoice, computerChoice){
   };
 }
 
-var playerChoice = "ROCK" ;                               //testing
-var computerChoice = computerChoice();                    //to see 
-console.log(playRound(playerChoice, computerChoice));     //if it works correctly
+function game(){
+  let scorePlayer = 0;
+  let scoreComputer = 0;
+  for (let i = 0; i < 5; i++){
+    const playerSelection = playerChoice();
+    const computerSelection = computerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+    console.log("------------------");
+    if(checkWinner(playerSelection, computerSelection) == "player"){
+      scorePlayer++;
+    }
+    else if(checkWinner(playerSelection,computerSelection) == "computer"){
+      scoreComputer++;
+    }
+  }
+    console.log("Game over!")
+
+    if(scorePlayer > scoreComputer){
+      console.log("Player is the winner!")
+    }
+    else if(scorePlayer < scoreComputer){
+      console.log("Computer is the winner!")
+    }
+    else{
+      console.log("We have a tie!")
+    }
+  
+}
+
+game();
