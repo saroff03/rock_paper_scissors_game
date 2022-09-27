@@ -150,4 +150,12 @@ footer{
     top: 50%;
     left: 13%;
   }
+  .outcome > p {
+    font-size: 20px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+  }
+  .scores{
+    padding-bottom: 20px;
+  }
 }
