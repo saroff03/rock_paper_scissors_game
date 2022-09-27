@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rock Paper Scissors</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Rock Paper Scissors Game">
+    <meta name="keywords" content="HTML, CSS, Rock, Paper, Scissors, Game, Mobile, rockpaperscissors game">
+    <meta name="author" content="Stoyan Sarov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap" rel="stylesheet">
+    <title>Rock Paper Scissors Game</title>
     <script src="main.js" defer></script>
   </head>
   <body>
+    <header>
+      <h1 class="title">ROCK PAPER SCISSORS</h1>
+    </header>
+    </div>
+    <div class="outcome">
+      <p>Make your choice. <br> First to 5 points wins.</p>
+    </div>
     <div class="scores">
-      <span class="playerScoreSpan"></span>
-      <span class="computerScoreSpan"></span>
+      <div class="score1">
+      <img src="images/default.png" alt="icon" id="playerImg">
+      <figcaption><span class="playerScoreSpan">Player score: 0</span></figcaption>
     </div>
+    <div class="score2">
+      <img src="images/default.png" alt="icon" id="computerImg">
+      <figcaption><span class="computerScoreSpan">Computer score: 0</span></figcaption>
+    </div>
+    </div>
+    <div class="weaponSelect"><p>Select your weapon:</p></div>
     <div class="container">
-      <button class="rock">Rock</button>
-      <button class="paper">Paper</button>
-      <button class="scissors">Scissors</button>
+      <button class="rock"></button>
+      <button class="paper"></button>
+      <button class="scissors"></button>
     </div>
-    <div class="outcome"></div>
+    <div class="modal">
+        <p class="modalP">Play again.</p>
+        <button class="restartGame">Play again</button>
+    </div>
   </body>
+  <footer>Copyright &copy Stoyan Sarov</footer>
 </html>
